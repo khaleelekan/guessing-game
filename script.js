@@ -35,6 +35,11 @@ function checkNumber(msg){
         '<div>that is not a valid number</div>';
         return;
     }
+
+    if (num > 100 || num < 1){
+        msgEl.innerHTML = '<div>number must be between 1 and 100</div>';
+        return;
+    }
 }
 
 function getRandomNumber(){
