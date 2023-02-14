@@ -15,7 +15,7 @@ recognition.start();
 //capture user speak
 
 function onSpeak(e){
-    const msg = e.results[0][0].transcript;
+    const msg = e.results[0][0].transcript
 
     //writeMessage(msg)
     //checkNumber(msg)
@@ -31,8 +31,9 @@ function checkNumber(msg){
     const num = +msg;
 
     if (Number.isNaN(num)){
-        msgEl.innerHTML += `
-        <div>that is not a valid number</div>`
+        msgEl.innerHTML = 
+        '<div>that is not a valid number</div>';
+        return;
     }
 }
 
