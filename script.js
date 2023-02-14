@@ -21,6 +21,21 @@ function onSpeak(e){
     //checkNumber(msg)
 }
 
+function writeMessage(msg){
+    msgEl.innerHTML =`
+    <div>you said: </div>
+    <span class="box">${msg}</span>`
+}
+//check message against number
+function checkNumber(msg){
+    const num = +msg;
+
+    if (Number.isNaN(num)){
+        msgEl.innerHTML += `
+        <div>that is not a valid number</div>`
+    }
+}
+
 function getRandomNumber(){
     return Math.floor(Math.random() * 100 ) + 1
 }
