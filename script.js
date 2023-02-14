@@ -59,3 +59,6 @@ function getRandomNumber(){
 
 //recognition result
 recognition.addEventListener('result',onSpeak);
+
+//recognition end
+recognition.addEventListener('end', () => recognition.start())
