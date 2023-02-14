@@ -40,6 +40,17 @@ function checkNumber(msg){
         msgEl.innerHTML = '<div>number must be between 1 and 100</div>';
         return;
     }
+
+    if (num === randomNum){
+        document.body.innerHTML = `<h2> congrats you have guessed the number right <br></br>
+        it was ${num}</h2>
+        <button class='play-again' id='play-again'>play again </button>`;
+        return;
+    }else if (num > randomNum){
+        msgEl.innerHTML = '<div>your guess is  high</div>';
+    }else{
+        msgEl.innerHTML = '<div>your guess is  low</div>'
+    }
 }
 
 function getRandomNumber(){
