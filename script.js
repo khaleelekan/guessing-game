@@ -47,9 +47,9 @@ function checkNumber(msg){
         <button class='play-again' id='play-again'>play again </button>`;
         return;
     }else if (num > randomNum){
-        msgEl.innerHTML = '<div>your guess is  high</div>';
+        msgEl.innerHTML += '<div>your guess is  high</div>';
     }else{
-        msgEl.innerHTML = '<div>your guess is  low</div>'
+        msgEl.innerHTML += '<div>your guess is  low</div>'
     }
 }
 
