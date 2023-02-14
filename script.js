@@ -31,13 +31,13 @@ function checkNumber(msg){
     const num = +msg;
 
     if (Number.isNaN(num)){
-        msgEl.innerHTML = 
+        msgEl.innerHTML += 
         '<div>that is not a valid number</div>';
         return;
     }
 
     if (num > 100 || num < 1){
-        msgEl.innerHTML = '<div>number must be between 1 and 100</div>';
+        msgEl.innerHTML += '<div>number must be between 1 and 100</div>';
         return;
     }
 
@@ -62,3 +62,11 @@ recognition.addEventListener('result',onSpeak);
 
 //recognition end
 recognition.addEventListener('end', () => recognition.start())
+
+//start a new game 
+
+document.body.addEventListener('click', (e)=>{
+    if (e.target.id ='play-again'){
+        window.location.reload();
+    }
+})
