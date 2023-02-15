@@ -17,8 +17,8 @@ recognition.start();
 function onSpeak(e){
     const msg = e.results[0][0].transcript
 
-    //writeMessage(msg)
-    //checkNumber(msg)
+    writeMessage(msg)
+    checkNumber(msg)
 }
 
 function writeMessage(msg){
@@ -63,7 +63,6 @@ recognition.addEventListener('result',onSpeak);
 //recognition end
 recognition.addEventListener('end', () => recognition.start())
 
-//start a new game 
 
 document.body.addEventListener('click', (e)=>{
     if (e.target.id ='play-again'){
